@@ -41,7 +41,9 @@ $obj = new notasController();
       </div>
       <div class="modal-footer">
         
-        <button type="button" class="btn btn-danger">Eliminar</button>
+       <!-- <button type="button" class="btn btn-danger">Eliminar</button>--->
+
+       <a href="EliminarNota.php?id=<? $campo[0] ?>" class="btn btn-danger">Eliminar</a>
 
         <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
       </div>

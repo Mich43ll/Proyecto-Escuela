@@ -19,7 +19,21 @@ class notasController{
       return($this->model->show($idNotas) !=false) ? $this ->model->show($idNotas): header("Location:index.php") ;
     }
 
+    public function visualizar($idNotas){
+      return($this->model->show($idNotas) !=false) ? $this ->model->visualizar($idNotas): header("Location:index.php") ;
+     
+    }
 
+
+    public function index(){
+      return ($this->model->index()) ? $this->model->index() : false ;
+    }
+
+    public function update($primerParcial, $segundoParcial, $tercerParcial, $promedio, $idClase, $idAlumno, $idEmpleado){
+      return ($this->model->update($idNotas,$primerParcial, $segundoParcial, $tercerParcial, $promedio, $idClase, $idAlumno, $idEmpleado)!=false) ? header("Location:show.php?idNotas=".$idNotas) : header("Location:index.php?idNotas=".$idNotas) ;
+    }
+
+    
 
 }
 
