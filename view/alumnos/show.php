@@ -2,7 +2,7 @@
 require_once("C://xampp/htdocs/Escuela/view/head/head.php");
 require_once("C://xampp/htdocs/Escuela/controller/alumnosController.php");
 
-$obj = new alumno();
+$obj = new alumnosController();
 
 
  $campo = $obj  ->show($_GET['idAlumno']);

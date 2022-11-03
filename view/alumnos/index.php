@@ -8,6 +8,7 @@ require_once("C://xampp/htdocs/Escuela/view/head/head.php");
 LO VA A MANDAR AL FORMULARIO DE INGRESAR NOTAS-->
 
 <a href="/escuela/view/alumnos/IngresarAlumno.php" class="btn btn-outline-success">Ingresar Alumno</a>
+<a href="/escuela/view/alumnos/show.php" class="btn btn-outline-success">Ver Alumno</a>
 
 <?php
 
