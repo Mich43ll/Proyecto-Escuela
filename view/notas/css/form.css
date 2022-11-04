@@ -11,14 +11,16 @@ body {
 
 form {
  	background:#111; 
-  width:500px;
-  margin:30px auto;
+  width:700px;
+  margin:60px auto;
   border-radius:0.4em;
   border:1px solid #191919;
   overflow:hidden;
   position:relative;
   box-shadow: 0 5px 10px 5px rgba(0,0,0,0.2);
 }
+
+
 
 form:after {
   content:"";
@@ -88,6 +90,8 @@ input[type=password] {
   border-radius:0.3em;
   margin-bottom:20px;
 }
+
+
 
 label[for=remember]{
  	color:white;
