@@ -30,7 +30,7 @@ class alumnosModel{
     public function show($idAlumno){
         $statement = $this->PDO->prepare("SELECT cn.idAlumno, cn.NombreCompleto, cn.Direccion,
         cn.Genero, cn.Edad, cn.Estado, cn.idGrado
-        FROM escuela.Grado  join escuela.alumnos a on cn.idAlumno = a.idAlumno
+        FROM escuela.grado  join escuela.alumnos a on cn.idAlumno = a.idAlumno
          where idAlumno= :idAlumno");
         $statement->bindParam(":idAlumno", $idAlumno);
         return($statement->execute()) ? $statement->fetch(): false;

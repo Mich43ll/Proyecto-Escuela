@@ -38,6 +38,17 @@
             </li>
           </ul>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Empleados</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+          <li>
+            <a class="dropdown-item" href="/escuela/view/empleados/showEmpl.php">Lista de Empleados</a>
+          </li>
+            <li>
+              <a class="dropdown-item" href="/escuela/view/empleados/index.php">Ingresar Empleados</a>
+            </li>
+          </ul>
+        </li>
 
           <ul class="dropdown-menu dropdown-menu-dark">
             <li><a class="dropdown-item" href="#">Action</a></li>
