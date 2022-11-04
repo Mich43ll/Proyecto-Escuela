@@ -15,7 +15,7 @@ class empleadosModel{
     }
 
     public function insertar($NombreCompleto, $idCargo, $Direccion, $Telefono, $Estado){
-        $statement = $this->PDO->prepare("INSERT INTO empleados VALUES(null,:NombreCompleto,:idCargo,:Direccion,:Telefono,:Estado,)");
+        $statement = $this->PDO->prepare("INSERT INTO empleados VALUES(null,:NombreCompleto,:idCargo,:Direccion,:Telefono,:Estado)");
         $statement->bindParam(":NombreCompleto",$NombreCompleto);
         $statement->bindParam(":idCargo",$idCargo);
         $statement->bindParam(":Direccion",$Direccion);
