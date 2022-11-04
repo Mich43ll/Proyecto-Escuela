@@ -28,55 +28,54 @@ class notasModel{
     
     }
 
-    public function show($idNotas){
-        $statement = $this->PDO->prepare("SELECT cn.idNotas, cn.primerParcial, cn.segundoParcial,
-        cn.tercerParcial, cn.promedio, c.NombreClase, a.NombreCompleto,   
-        e.NombreCompleto
-        FROM escuela.controlnotas cn join escuela.alumnos a on cn.idAlumno = a.idAlumno
-        join escuela.clase c on c.idClase = cn.idClase
-        join escuela.empleados e on cn.idEmpleado = e.idEmpleado
-         where idNotas= :idNotas ");
-        $statement->bindParam(":idNotas", $idNotas);
-        return($statement->execute()) ? $statement->fetch(): false;
-
-    }
-
     public function visualizar($idNotas){
-        $statement = $this->PDO->prepare("SELECT cn.idNotas, cn.primerParcial, cn.segundoParcial,
-        cn.tercerParcial, cn.promedio, c.NombreClase, a.NombreCompleto,   
-        e.NombreCompleto
-        FROM escuela.controlnotas cn join escuela.alumnos a on cn.idAlumno = a.idAlumno
-        join escuela.clase c on c.idClase = cn.idClase
-        join escuela.empleados e on cn.idEmpleado = e.idEmpleado
-         where idNotas= :idNotas ");
-        $statement->bindParam(":idNotas", $idNotas);
-        return($statement->execute()) ? $statement->fetch(): false;
-
+            $statement = $this->PDO->prepare("select * from escuela.controlnotas where idNotas= :idNotas limit 1");
+            $statement ->bindParam(":idNotas", $idNotas);
+            return($statement->execute()) ? $statement->fetch():false;
     }
 
-    public function index(){
+    public function indexNota(){
+            $statement = $this->PDO->prepare("select * from escuela.controlnotas");
+            return($statement->execute()) ? $statement -> fetchAll() : false;
+    }
+
+    public function update($idNotas, $primerParcial, $segundoParcial, $tercerParcial, $promedio, $idClase, $idAlumno, $idEmpleado){
+            $statement = $this->PDO->prepare("update escuela.controlnotas
+            set primerParcial=:primerParcial, segundoParcial=:segundoParcial, tercerParcial=:tercerParcial,
+            promedio=:promedio, idClase=:idClase, idEmpleado=:idEmpleado, idAlumno=:idAlumno
+            WHERE idNotas = :idNotas ");
+
+            $statement->bindParam(":primerParcial",$primerParcial);
+            $statement->bindParam(":segundoParcial",$segundoParcial);
+            $statement->bindParam(":tercerParcial",$tercerParcial);
+            $statement->bindParam(":promedio",$promedio);
+            $statement->bindParam( ":idClase",$idClase);
+            $statement->bindParam( ":idEmpleado",$idEmpleado);
+            $statement->bindParam(":idAlumno",$idAlumno);
+            $statement->bindParam(":idNotas", $idNotas);
+            return($statement->execute()) ? $idNotas: false;
+    }
+
+
+    //PRUEBA
+    public function indiceprueba(){
         $statement = $this->PDO->prepare("SELECT cn.idNotas, cn.primerParcial, cn.segundoParcial,
         cn.tercerParcial, cn.promedio, c.NombreClase, a.NombreCompleto,   
         e.NombreCompleto
         FROM escuela.controlnotas cn join escuela.alumnos a on cn.idAlumno = a.idAlumno
         join escuela.clase c on c.idClase = cn.idClase
         join escuela.empleados e on cn.idEmpleado = e.idEmpleado");
-        return ($statement -> execute()) ?  $statement->fetchAll(): false;
-    }
-    
-    public function update($id, $primerParcial, $segundoParcial, $tercerParcial, $promedio, $idClase, $idAlumno, $idEmpleado ){
-        $statement=$this->PDO->prepare("UPDATE escuela.controlnotas SET primerParcial = :primerParcial, segundoParcial= :segundoParcial,
-        tercerParcial=:tercerParcial, promedio=:promedio, idClase=:idClase, idAlumno= :idAlumno, idEmpleado= :idEmpleado WHERE idNotas = :idNotas ");
-           $statement->bindParam(":primerParcial",$primerParcial);
-           $statement->bindParam(":segundoParcial",$segundoParcial);
-           $statement->bindParam(":tercerParcial",$tercerParcial);
-           $statement->bindParam(":promedio",$promedio);
-           $statement->bindParam(  ":idClase",$idClase);
-           $statement->bindParam(":idAlumno",$idAlumno);
-           $statement->bindParam( ":idEmpleado",$idEmpleado);
-           $statement->bindParam(":idNotas", $idNotas);
+        return($statement->execute()) ? $statement -> fetchAll() : false;
+}
+    //PRUEBA
 
-           return($statement->execute()) ? $id: false;
+
+
+
+    public function delete($idNotas){
+        $statement = $this ->PDO->prepare("DELETE FROM controlnotas  WHERE idNotas = :idNotas ");
+        $statement->bindParam(":idNotas",$idNotas);
+        return($statement->execute())? true : false;
     }
 
 

@@ -12,25 +12,29 @@ class notasController{
 
     public function guardar($primerParcial, $segundoParcial, $tercerParcial, $promedio, $idClase, $idAlumno, $idEmpleado){
      $idNotas =  $this->model->insertar($primerParcial, $segundoParcial, $tercerParcial, $promedio, $idClase, $idAlumno, $idEmpleado);
-     return ($idNotas!=false) ? header("Location:show.php?idNotas=".$idNotas)  :  header("Location:IngresarNota.php");
+     return ($idNotas!=false) ? header("Location:indexNota.php")  :  header("Location:IngresarNota.php");
     }
 
-    public function show($idNotas){
-      return($this->model->show($idNotas) !=false) ? $this ->model->show($idNotas): header("Location:index.php") ;
-    }
 
     public function visualizar($idNotas){
-      return($this->model->show($idNotas) !=false) ? $this ->model->visualizar($idNotas): header("Location:index.php") ;
-     
+      return($this ->model->visualizar($idNotas)!=false)? $this->model->visualizar($idNotas): header("Location:VerIdNotas.php");
     }
 
-
-    public function index(){
-      return ($this->model->index()) ? $this->model->index() : false ;
+    public function indexNota(){
+      return($this->model->indexNota()) ? $this->model->indexNota() : false; 
     }
 
-    public function update($primerParcial, $segundoParcial, $tercerParcial, $promedio, $idClase, $idAlumno, $idEmpleado){
-      return ($this->model->update($idNotas,$primerParcial, $segundoParcial, $tercerParcial, $promedio, $idClase, $idAlumno, $idEmpleado)!=false) ? header("Location:show.php?idNotas=".$idNotas) : header("Location:index.php?idNotas=".$idNotas) ;
+    public function indiceprueba(){
+      return($this->model->indiceprueba()) ? $this->model->indiceprueba() : false; 
+    }
+
+    public function update($idNotas, $primerParcial, $segundoParcial, $tercerParcial, $promedio, $idClase, $idAlumno, $idEmpleado){
+      return ($this->model->update($idNotas,$primerParcial, $segundoParcial, $tercerParcial, $promedio, $idClase, $idAlumno, $idEmpleado) != false) 
+      ? header("Location:indexNota.php") : header("Location:VerIdNotas.php?idNotas=".$idNotas) ;
+    }
+
+    public function delete($idNotas){
+      return ($this->model->delete($idNotas)) ? header("Location:indexNota.php") : header("Location:VerIdNotas.php?idNotas=".$idNotas) ;
     }
 
     
