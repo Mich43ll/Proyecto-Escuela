@@ -26,63 +26,6 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
 
 
 <form action="registrar.php"  method ="POST" autocomplete="off">
-<?php
-
-$primerParcial="";
-$segundoParcial="";
-$tercerParcial="";
-$idClase="";
-$idAlumno="";
-$idEmpleado="";
-
-if(isset($_POST['primerParcial'])){
-  $primerParcial= $_POST['primerParcial'];
-  $segundoParcial= $_POST['segundoParcial'];
-  $tercerParcial= $_POST['tercerParcial'];
-  $idClase= $_POST['idClase'];
-  $idAlumno= $_POST['idAlumno'];
-  $idEmpleado= $_POST['idEmpleado'];
-  
-  $campos = array();
-  
-  if($primerParcial==""){
-        array_push($campos, "El campo primer parcial no debe estar vacio");
-  }
-  if($segundoParcial==""){
-    array_push($campos, "El campo segundo parcial no debe estar vacio");
-  }
-
-  if($tercerParcial==""){
-    array_push($campos, "El campo tercer parcial no debe estar vacio");
-  }
-  if($idClase==""){
-    array_push($campos, "El campo clase no debe estar vacio");
-  }
-
-  if($idAlumno==""){
-    array_push($campos, "El campo alumno no debe estar vacio");
-  }
-  if($idEmpleado==""){
-    array_push($campos, "El campo empleado no debe estar vacio");
-  }
-
-  if(count($campos)>0){
-    echo "<div class='error'>";
-    for($i = 0; $i <count($campos); $i++){
-      echo "<li>".$campos[$i]."</div>";
-    }
-  }
-  else{
-    echo "<div class= 'correcto'>">
-    "Datos correctos";
-  }
-  echo "</div>";
-
-  }
-
-?>
-
-
 
 <h1>Ingresar Notas del Alumno</h1>
   <div class="inset">
