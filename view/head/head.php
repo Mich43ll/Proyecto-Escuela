@@ -80,9 +80,7 @@
               </ul>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="/escuela/view/login/login.php">Iniciar Sesion</a>
-            </li>
+          
 
           </ul>
 

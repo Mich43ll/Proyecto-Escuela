@@ -1,4 +1,5 @@
 <?php
+require 'parametros.php';
 class db{
     private $host = "localhost";
     private $dbname = "escuela";
@@ -14,8 +15,11 @@ class db{
             return $e-> getMessage();
         }
     }
+    protected $con;
+    function __construct(){
+        $this->con=new mysqli(SERVER,USER,PASSWORD,BASE);
+    }
 
 }
-
 
 ?>
