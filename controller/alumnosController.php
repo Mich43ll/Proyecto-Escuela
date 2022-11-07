@@ -10,15 +10,19 @@ class alumnosController{
 
     }
 
-    public function guardar($NombreCompleto, $Direccion, $Genero, $Edad, $Estado, $idGrado){
-     $idAlumno =  $this->model->insertar($NombreCompleto, $Direccion, $Genero, $Edad, $Estado, $idGrado);
-     return ($idAlumno!=false) ? header("Location:show.php?idAlumno=".$idAlumno)  :  header("Location:IngresarAlumno.php");
+    public function guardar($identidad, $nombre, $apellido, $direccion, $correo, $sexo, $edad){
+     $id =  $this->model->insertar($identidad, $nombre, $apellido, $direccion, $correo, $sexo, $edad);
+     return ($id!=false) ? header("Location:show.php?id=".$id)  :  header("Location:IngresarAlumno.php");
     }
-
-    public function show($idAlumno){
-      return($this->model->show($idAlumno) !=false) ? $this ->model->show($idAlumno): header("Location:index.php") ;
+    public function show($id){
+      return($this->model->show($id) != false) ? $this->model->show($id)  : header("Location:index.php");
     }
-
+    public function index(){
+      return ($this->model->index()) ? $this->model->index() : false;
+    }
+    public function update($id, $identidad, $nombre, $apellido, $direccion, $correo, $sexo, $edad){
+      return ($this->model->update($id, $identidad, $nombre, $apellido, $direccion, $correo, $sexo, $edad) != false) ? header("Location:show.php?id=".$id)  :  header("Location:index.php");
+     }
 
 
 }

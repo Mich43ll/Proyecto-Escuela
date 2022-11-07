@@ -7,7 +7,7 @@ require_once("C://xampp/htdocs/Escuela/view/head/head.php");
 <link rel="stylesheet" href="./css/form.css">
 <!--ACCION QUE VA A REALIZAR PARA GUARDAR LOS DATOS EL POST Y LA RUTA SE VA A ENVIAR A LA TABLA PARA VISUALIZAR
 EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
-<form action="VisualizarNotas.php"  method ="POST" autocomplete="off">
+<form action="VisualizarAlumnos.php"  method ="POST" autocomplete="off">
   <h1>Ingresar Nombre del Alumno</h1>
   <div class="inset">
 
