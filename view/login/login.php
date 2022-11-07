@@ -19,42 +19,41 @@
 <!--ACCION QUE VA A REALIZAR PARA GUARDAR LOS DATOS EL POST Y LA RUTA SE VA A ENVIAR A LA TABLA PARA VISUALIZAR
 EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
 <style>
-.error{
-  background-color: #FF9185;
-  font-size: 12px;
-  padding: 10px;
-} 
+  .error {
+    background-color: #FF9185;
+    font-size: 12px;
+    padding: 10px;
+  }
 
-.correcto{
-  background-color: #A0DEA7;
-  font-size: 12px;
-  padding: 10px;
-} 
-
+  .correcto {
+    background-color: #A0DEA7;
+    font-size: 12px;
+    padding: 10px;
+  }
 </style>
 
 
 
-<form action="#"  method ="POST" autocomplete="off">
-<h1>Ingresar Notas del Alumno</h1>
+<form action="#" method="POST" autocomplete="off">
+  <h1>Ingresar Notas del Alumno</h1>
   <div class="inset">
 
-  <p>
-    <label for="text">Usuario</label>
-    <input type="text" name="Usuario" >
-  </p>
+    <p>
+      <label for="text">Usuario</label>
+      <input type="text" name="Usuario">
+    </p>
 
-  <p>
-    <label for="text">Contraseña</label>
-    <input type="password" name="Contraseña">
-  </p>
+    <p>
+      <label for="text">Contraseña</label>
+      <input type="password" name="Contraseña">
+    </p>
 
 
-  <button type="submit" class="btn btn-primary" name="validar">Ingresar</button>
+    <button type="submit" class="btn btn-primary" name="validar">Ingresar</button>
     <a class="btn btn-danger" href="index.php">Cancelar</a>
- 
- 
-  
+
+
+
   </div>
 
 </form>
