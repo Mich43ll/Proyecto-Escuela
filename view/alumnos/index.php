@@ -1,10 +1,43 @@
 <?php
     require_once("C://xampp/htdocs/Escuela/view/head/head.php");
     require_once("C://xampp/htdocs/Escuela/controller/alumnosController.php");
+    $obj = new alumnosController();
+    $rows = $obj->index();
 ?>
 
-<!---EN ESTE INDEX LO QUE HARA QUE EN ESE BOTON CUANDO LO SELECCION
-LO VA A MANDAR AL FORMULARIO DE INGRESAR NOTAS-->
+<h2 class="text-center">Lista de Alumnos</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Identidad</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Direccion</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Edad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php if($rows):?>
+            <?php foreach($rows as $row): ?>
+                <tr>
+                    <th><?= $row[1] ?></th>
+                    <th><?= $row[2] ?></th>
+                    <th><?= $row[3] ?></th>
+                    <th><?= $row[4] ?></th>
+                    <th><?= $row[5] ?></th>
+                    <th><?= $row[6] ?></th>
+                    <th><?= $row[7] ?></th>
+                </tr>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <tr>
+                <td colspan="8" class="text-center">No hay Registros</td>
+            </tr>
+        <?php endif; ?>
+    </tbody>
+</table>
 
 
 

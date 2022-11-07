@@ -22,7 +22,10 @@ class alumnosController{
     }
     public function update($id, $identidad, $nombre, $apellido, $direccion, $correo, $sexo, $edad){
       return ($this->model->update($id, $identidad, $nombre, $apellido, $direccion, $correo, $sexo, $edad) != false) ? header("Location:show.php?id=".$id)  :  header("Location:index.php");
-     }
+    }
+     public function delete($id){
+      return ($this->model->delete($id)) ? header("Location:index.php") : header("Location:show.php?id=".$id);
+    }
 
 
 }
