@@ -49,10 +49,10 @@
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Empleados</a>
           <ul class="dropdown-menu dropdown-menu-dark">
           <li>
-            <a class="dropdown-item" href="/escuela/view/empleados/showEmpl.php">Lista de Empleados</a>
+            <a class="dropdown-item" href="/escuela/view/empleados/ListarEmpleados.php">Lista de Empleados</a>
           </li>
             <li>
-              <a class="dropdown-item" href="/escuela/view/empleados/indexEmpl.php">Ingresar Empleados</a>
+              <a class="dropdown-item" href="/escuela/view/empleados/IngresarEmpleado.php">Ingresar Empleados</a>
             </li>
           </ul>
         </li>

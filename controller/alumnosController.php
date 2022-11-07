@@ -10,21 +10,21 @@ class alumnosController{
 
     }
 
-    public function guardar($identidad, $nombre, $apellido, $direccion, $correo, $sexo, $edad){
-     $id =  $this->model->insertar($identidad, $nombre, $apellido, $direccion, $correo, $sexo, $edad);
-     return ($id!=false) ? header("Location:show.php?id=".$id)  :  header("Location:IngresarAlumno.php");
+    public function guardar($NombreCompleto, $Direccion, $Genero, $Edad, $Estado, $idGrado){
+     $idAlumnos =  $this->model->insertar($NombreCompleto, $Direccion, $Genero, $Edad, $Estado, $idGrado);
+     return ($idAlumnos!=false) ? header("Location:show.php?idAlumnos=".$idAlumnos)  :  header("Location:IngresarAlumno.php");
     }
-    public function show($id){
-      return($this->model->show($id) != false) ? $this->model->show($id)  : header("Location:index.php");
+    public function show($idAlumnos){
+      return($this->model->show($idAlumnos) != false) ? $this->model->show($idAlumnos)  : header("Location:index.php");
     }
     public function index(){
       return ($this->model->index()) ? $this->model->index() : false;
     }
-    public function update($id, $identidad, $nombre, $apellido, $direccion, $correo, $sexo, $edad){
-      return ($this->model->update($id, $identidad, $nombre, $apellido, $direccion, $correo, $sexo, $edad) != false) ? header("Location:show.php?id=".$id)  :  header("Location:index.php");
+    public function update($idAlumnos, $NombreCompleto, $Direccion, $Genero, $Edad, $Estado, $idGrado){
+      return ($this->model->update($idAlumnos, $NombreCompleto, $Direccion, $Genero, $Edad, $Estado, $idGrado) != false) ? header("Location:show.php?idAlumnos=".$idAlumnos)  :  header("Location:index.php");
     }
-     public function delete($id){
-      return ($this->model->delete($id)) ? header("Location:index.php") : header("Location:show.php?id=".$id);
+     public function delete($idAlumnos){
+      return ($this->model->delete($idAlumnos)) ? header("Location:index.php") : header("Location:show.php?idAlumnos=".$idAlumnos);
     }
 
 

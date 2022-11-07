@@ -12,38 +12,32 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
   <div class="inset">
 
   <p>
-    <label for="text">identidad</label>
-    <input type="text" name="identidad" >
+    <label for="text">NombreCompleto</label>
+    <input type="text" name="NombreCompleto" >
   </p>
 
   <p>
-    <label for="text">nombre</label>
-    <input type="text" name="nombre">
+    <label for="text">Direccion</label>
+    <input type="text" name="Direccion">
   </p>
 
   <p>
-    <label for="text">apellido</label>
-    <input type="text" name="apellido" >
+    <label for="text">Genero</label>
+    <input type="text" name="Genero" >
   </p>
 
   <p>
-    <label for="text">direccion</label>
-    <input type="text" name="direccion">
+    <label for="text">Edad</label>
+    <input type="text" name="Edad">
+  </p>
+  <p>
+    <label for="text">Estado</label>
+    <input type="text" name="Estado">
   </p>
   
   <p>
-    <label for="text">correo</label>
-    <input type="text" name="correo">
-  </p>
-
-  <p>
-    <label for="text">sexo</label>
-    <input type="text" name="sexo">
-  </p>
-
-  <p>
-    <label for="text">edad</label>
-    <input type="text" name="edad">
+    <label for="text">idGrado</label>
+    <input type="text" name="idGrado">
   </p>
 
   <button type="submit" class="btn btn-primary">Guardar</button>

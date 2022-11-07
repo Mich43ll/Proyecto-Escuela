@@ -1,19 +1,18 @@
 <?php
     require_once("C://xampp/htdocs/Escuela/view/head/head.php");
-    require_once("C://xampp/htdocs/Escuela/controller/alumnosController.php");
-    $obj = new alumnosController();
+    require_once("C://xampp/htdocs/Escuela/controller/empleadosController.php");
+    $obj = new empleadosController();
     $rows = $obj->index();
 ?>
-<h2 class="text-center">Lista de Alumnos</h2>
+<h2 class="text-center">Lista de Empleados</h2>
 <table class="table">
     <thead>
         <tr>
             <th scope="col">NombreCompleto</th>
+            <th scope="col">idCargo</th>
             <th scope="col">Direccion</th>
-            <th scope="col">Genero</th>
-            <th scope="col">Edad</th>
+            <th scope="col">Telefono</th>
             <th scope="col">Estado</th>
-            <th scope="col">idGrado</th>
             <th scope="col">Acciones</th>
         </tr>
     </thead>
@@ -26,10 +25,9 @@
                     <th><?= $row[3] ?></th>
                     <th><?= $row[4] ?></th>
                     <th><?= $row[5] ?></th>
-                    <th><?= $row[6] ?></th>
                     <th>
-                        <a href="show.php?idAlumnos=<?= $row[0] ?>" class="btn btn-primary">Ver</a>
-                        <a href="edit.php?idAlumnos=<?= $row[0] ?>" class="btn btn-success">Modificar</a>
+                        <a href="show.php?idEmpleado=<?= $row[0] ?>" class="btn btn-primary">Ver</a>
+                        <a href="edit.php?idEmpleado=<?= $row[0] ?>" class="btn btn-success">Modificar</a>
                         <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Eliminar</a>
                         <!-- Modal -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -42,7 +40,7 @@
                                     <div class="modal-body">!Una vez eliminado no podra recuperar el cambio que realizó!</div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
-                                        <a href="delete.php?idAlumnos=<?= $row[0]?>" class="btn btn-danger">Eliminar</a>
+                                        <a href="delete.php?idEmpleado=<?= $row[0]?>" class="btn btn-danger">Eliminar</a>
                                         <!--<button type="button">Eliminar</button> -->
                                     </div>
                               </div>

@@ -1,20 +1,20 @@
 <?php
 require_once("C://xampp/htdocs/Escuela/view/head/head.php");
-require_once("C://xampp/htdocs/Escuela/controller/alumnosController.php");
-
-$obj = new alumnosController();
-$data = $obj->show($_GET['idAlumnos']);
+require_once("C://xampp/htdocs/Escuela/controller/empleadosController.php");
+$obj = new empleadosController();
+$data = $obj->show($_GET['idEmpleado']);
 ?>
-<h2 class="text-center">Lista de Alumnos</h2>
+
+
+<h2 class="text-center">Lista de Empleados</h2>
 <table class="table container-fluid">
   <thead>
     <tr>
       <th scope="col">NombreCompleto</th>
+      <th scope="col">idCargo</th>
       <th scope="col">Direccion</th>
-      <th scope="col">Genero</th>
-      <th scope="col">Edad</th>
+      <th scope="col">Telefono</th>
       <th scope="col">Estado</th>
-      <th scope="col">idGrado</th>
     </tr>
   </thead>
   <tbody>
@@ -24,13 +24,12 @@ $data = $obj->show($_GET['idAlumnos']);
       <td scope="col"><?= $data[3]?></td>
       <td scope="col"><?= $data[4]?></td>
       <td scope="col"><?= $data[5]?></td>
-      <td scope="col"><?= $data[6]?></td>
     </tr>
   </tbody>
 </table>
 <div class="pb-3">
   <a href="index.php" class="btn btn-primary">Regresar</a>
-  <a href="edit.php?idAlumnos=<?= $data[0]?>" class="btn btn-success">Actualizar</a>
+  <a href="edit.php?idEmpleado=<?= $data[0]?>" class="btn btn-success">Actualizar</a>
   <!-- Button trigger modal -->
 <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Eliminar</a>
 
@@ -48,7 +47,7 @@ $data = $obj->show($_GET['idAlumnos']);
           </div>
           <div class="modal-footer">
               <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
-              <a href="delete.php?idAlumnos=<?= $data[0]?>" class="btn btn-danger">Eliminar</a>
+              <a href="delete.php?idEmpleado=<?= $data[0]?>" class="btn btn-danger">Eliminar</a>
               <!--<button type="button">Eliminar</button> -->
           </div>
       </div>
@@ -57,14 +56,6 @@ $data = $obj->show($_GET['idAlumnos']);
 </div>
 
 
-
-
-
-
-
-
 <?php
-
 require_once("C://xampp/htdocs/Escuela/view/head/footer.php");
-
 ?>
