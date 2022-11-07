@@ -37,7 +37,7 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
   </p>
   
   <button type="submit" class="btn btn-primary">Guardar</button>
-    <a class="btn btn-danger" href="index.php">Cancelar</a>
+    <a class="btn btn-danger" href="ListarEmpleados.php">Cancelar</a>
  
   </div>
 

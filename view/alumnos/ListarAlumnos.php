@@ -14,7 +14,6 @@
             <th scope="col">Edad</th>
             <th scope="col">Estado</th>
             <th scope="col">idGrado</th>
-            <th scope="col">Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -29,25 +28,6 @@
                     <th><?= $row[6] ?></th>
                     <th>
                         <a href="show.php?idAlumnos=<?= $row[0] ?>" class="btn btn-primary">Ver</a>
-                        <a href="edit.php?idAlumnos=<?= $row[0] ?>" class="btn btn-success">Modificar</a>
-                        <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Eliminar</a>
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">¿Desea eliminar el registro de <?=$row[1]?>?</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">!Una vez eliminado no podra recuperar el cambio que realizó!</div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
-                                        <a href="delete.php?idAlumnos=<?= $row[0]?>" class="btn btn-danger">Eliminar</a>
-                                        <!--<button type="button">Eliminar</button> -->
-                                    </div>
-                              </div>
-                            </div>
-                        </div>
                     </th>
                 </tr>
             <?php endforeach; ?>

@@ -28,7 +28,7 @@ $data = $obj->show($_GET['idEmpleado']);
   </tbody>
 </table>
 <div class="pb-3">
-  <a href="index.php" class="btn btn-primary">Regresar</a>
+  <a href="ListarEmpleados.php" class="btn btn-primary">Regresar</a>
   <a href="edit.php?idEmpleado=<?= $data[0]?>" class="btn btn-success">Actualizar</a>
   <!-- Button trigger modal -->
 <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Eliminar</a>
