@@ -12,7 +12,7 @@ class notasController{
 
     public function guardar($primerParcial, $segundoParcial, $tercerParcial, $promedio, $idClase, $idAlumno, $idEmpleado){
      $idNotas =  $this->model->insertar($primerParcial, $segundoParcial, $tercerParcial, $promedio, $idClase, $idAlumno, $idEmpleado);
-     return ($idNotas!=false) ? header("Location:indexNota.php")  :  header("Location:IngresarNota.php");
+     //return ($idNotas!=false) ? header("Location:indexNota.php")  :  header("Location:IngresarNota.php");
     }
 
 

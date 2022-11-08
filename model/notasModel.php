@@ -15,7 +15,7 @@ class notasModel{
     }
 
     public function insertar($primerParcial, $segundoParcial, $tercerParcial, $promedio, $idClase, $idAlumno, $idEmpleado ){
-        $statement = $this->PDO->prepare("INSERT INTO controlnotas VALUES(null,:primerParcial,:segundoParcial,:tercerParcial,:promedio,:idClase,:idAlumno,:idEmpleado)");
+        $statement = $this->PDO->prepare("INSERT INTO escuela.controlnotas VALUES(null,:primerParcial,:segundoParcial,:tercerParcial,:promedio,:idClase,:idAlumno,:idEmpleado)");
         $statement->bindParam(":primerParcial",$primerParcial);
         $statement->bindParam(":segundoParcial",$segundoParcial);
         $statement->bindParam(":tercerParcial",$tercerParcial);
