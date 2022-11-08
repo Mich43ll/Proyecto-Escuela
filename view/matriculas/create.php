@@ -1,13 +1,23 @@
 <?php
 
-require_once("C://xampp/htdocs/Escuela/view/head/head.php");
+require_once("C://wamp64/www/Escuela/view/head/head.php");
+require_once("C://wamp64/www/Escuela/controller/matriculascontroller.php");
 
 ?>
 
 <link rel="stylesheet" href="./css/form.css">
 <!--ACCION QUE VA A REALIZAR PARA GUARDAR LOS DATOS EL POST Y LA RUTA SE VA A ENVIAR A LA TABLA PARA VISUALIZAR
 EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
-<form action="vizualizarmatricula.php"  method ="POST" autocomplete="off">
+<form action="create.php"  method ="POST" autocomplete="off">
+<?php
+
+$obj = new matriculasController();
+$obj->guardar( 
+    $_POST['IdAlumno'],
+    $_POST['Jornada'],
+    $_POST['idGrado']
+);
+?>
   <h1>Ingresar Matricula</h1>
   <div class="inset">
 
@@ -41,6 +51,6 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
 <script src="./js/ingresar.js"></script>
 <?php
 
-require_once("C://xampp/htdocs/Escuela/view/head/footer.php");
+require_once("C://wamp64/www/Escuela/view/head/footer.php");
 
 ?>

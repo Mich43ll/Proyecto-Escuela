@@ -1,5 +1,5 @@
 <?php
-require_once("C://xampp/htdocs/Escuela/controller/matriculascontroller.php");
+require_once("C://wamp64/www/Escuela/controller/matriculascontroller.php");
 $obj = new matriculasController();
 $obj->guardar( 
     $_POST['IdAlumno'],

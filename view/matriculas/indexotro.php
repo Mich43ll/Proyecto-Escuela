@@ -1,6 +1,6 @@
 <?php
-require_once("C://xampp/htdocs/Escuela/view/head/head.php");
-require_once("C://xampp/htdocs/Escuela/controller/matriculasController.php");
+require_once("C://wamp64/www/Escuela/view/head/head.php");
+require_once("C://wamp64/www/Escuela/controller/matriculasController.php");
 $obj = new matriculasController();
 $rows= $obj->indexotro();
 ?>
@@ -45,5 +45,5 @@ $rows= $obj->indexotro();
 
 
 <?php
-require_once("C://xampp/htdocs/Escuela/view/head/footer.php");
+require_once("C://wamp64/www/Escuela/view/head/footer.php");
 ?>

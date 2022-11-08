@@ -8,14 +8,14 @@ class matriculasModel{
     private $PDO;
     public function __construct()
     {
-        require_once("C://xampp/htdocs/Escuela/config/db.php");
+        require_once("C://wamp64/www/Escuela/config/db.php");
         $con = new db();
         //ALMACENAR LA CONEXION LA QUE BUSCA EL METODO DE ESTO PARA RETORNAR LOS DATOS
         $this ->PDO= $con->conexion();
     }
 
     public function insertar($IdAlumno,$Jornada,$idGrado){
-       $statement = $this->PDO->prepare("INSERT INTO matriculas (IdAlumno,Jornada,idGrado ) VALUES(null,:IdAlumno,:Jornada,:idGrado)");
+       $statement = $this->PDO->prepare("INSERT INTO escuela.matriculas VALUES(null,:IdAlumno,:Jornada,:idGrado)");
        $statement->bindParam(":IdAlumno",$IdAlumno);
        $statement->bindParam(":Jornada",$Jornada);
        $statement->bindParam(":idGrado",$idGrado);
