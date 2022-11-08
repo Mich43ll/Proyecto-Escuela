@@ -10,8 +10,8 @@ class clasesController{
 
     }
 
-    public function guardar($NombreClase, $Id_Clase, $Estado, $FK_IdEmpleado){
-     $idAlumno =  $this->model->insertar($NombreClase, $Id_Clase, $Estado, $FK_IdEmpleado);
+    public function guardar($NombreClase, $Estado, $FK_IdEmpleado){
+     $Id_Clase =  $this->model->insertar( $NombreClase, $Estado, $FK_IdEmpleado);
      return ($Id_Clase!=false) ? header("Location:showClass.php?Id_Clase=".$Id_Clase)  :  header("Location:IngresarClase.php");
     }
 

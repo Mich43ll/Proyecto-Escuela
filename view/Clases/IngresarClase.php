@@ -12,18 +12,18 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
   <div class="inset">
 
   <p>
-    <label for="text">NombreClase</label>
-    <input type="text" name="NombreCompleto" >
+    <label for="text">Nombre Clase</label>
+    <input type="text" name="NombreClase" >
   </p>
 
   <p>
-    <label for="text">Id_Clase</label>
-    <input type="text" name="idCargo">
+    <label for="text">Estado</label>
+    <input type="text" name="Estado">
   </p>
 
   <p>
-    <label for="text">Fk_idEmpleado</label>
-    <input type="text" name="Direccion">
+    <label for="text">Id Empleado</label>
+    <input type="text" name="Fk_idEmpleado">
   </p>
   
 

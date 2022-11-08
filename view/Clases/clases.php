@@ -12,7 +12,7 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
   <div class="inset">
 
   <p>
-    <label for="text">NombreClase</label>
+    <label for="text">Nombre Clase</label>
     <input type="text" name="NombreCompleto" >
   </p>
 
@@ -22,7 +22,7 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
   </p>
 
   <p>
-    <label for="text">Fk_idEmpleado</label>
+    <label for="text">idEmpleado</label>
     <input type="text" name="Direccion">
   </p>
 

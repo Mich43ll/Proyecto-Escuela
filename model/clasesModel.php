@@ -14,10 +14,9 @@ class clasesModel{
         $this ->PDO= $con->conexion();
     }
 
-    public function insertar($NombreClase, $Id_Clase, $Estado, $FK_IdEmpleado){
+    public function insertar($NombreClase, $Estado, $FK_IdEmpleado){
         $statement = $this->PDO->prepare("INSERT INTO clases VALUES(null,:NombreClase,:Id_Clase,:Estado,:FK_IdEmpleado)");
         $statement->bindParam(":NombreClase",$NombreClase);
-        $statement->bindParam(":Id_Clase",$Id_Clase);
         $statement->bindParam(":Estado",$Estado);    
         $statement->bindParam(":FK_IdEmpleado",$FK_IdEmpleado);
         return ($statement->execute()) ? $this->PDO->lastInsertId(): false;
