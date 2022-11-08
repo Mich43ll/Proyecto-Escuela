@@ -1,11 +1,11 @@
 <?php
 require_once("C://xampp/htdocs/Escuela/view/head/head.php");
-require_once("C://xampp/htdocs/Escuela/controller/clasesController.php");
+require_once("C://xampp/htdocs/Escuela/controller/clasescontroller.php");
 
 $obj = new clasesController();
 
 
- $campo = $obj  ->show($_GET['Id_Clase']);
+ $campo = $obj  ->showClase($_GET['Id_Clases']);
 
 ?>
 <!--END HEADER-->
@@ -15,7 +15,7 @@ $obj = new clasesController();
 <h2 class="text-center"> Registro de Clases</h2>
 <div class="pb-3">
     <a href="index.php" class="btn btn-primary">Regresar</a>
-    <a href="ModificarNota.php?id=<?= $campo[0] ?>" class="btn btn-success">Actualizar</a>
+    <a href="ModificarClase.php?id=<?= $campo[0] ?>" class="btn btn-success">Actualizar</a>
 
 
 <!-----ELIMINAR REGISTRO---->
@@ -28,12 +28,12 @@ $obj = new clasesController();
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Desea eliminar la clase?</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Desea eliminar el registro?</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
     <p>
-     Del registro de clase <?= $campo[1] ?>
+     Del registro de alumno <?= $campo[6] ?>
      </p>
      <p>
      Una vez eliminado no podra recuperar el cambio que realizó.....
@@ -41,7 +41,9 @@ $obj = new clasesController();
       </div>
       <div class="modal-footer">
         
-        <button type="button" class="btn btn-danger">Eliminar</button>
+       <!-- <button type="button" class="btn btn-danger">Eliminar</button>--->
+
+       <a href="EliminarClase.php?id=<? $campo[0] ?>" class="btn btn-danger">Eliminar</a>
 
         <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
       </div>
@@ -58,9 +60,10 @@ $obj = new clasesController();
   <caption>Listado de Clases</caption>
   <thead class="table-dark table-bordered border-dark">
     <tr>
-      <th scope="col">ID</th>
-      <th scope="col">NombreClase</th>
+      <th scope="col">Nombre Clase</th>
       <th scope="col">Estado</th>
+      <th scope="col">Id Empleado</th>
+      
     </tr>
   </thead>
   <!--FINAL DEL HEAD-->
@@ -71,8 +74,13 @@ $obj = new clasesController();
         <tr>
    
             <td scope="col"><?= $campo[0] ?></td>
+            <td scope="col"><?= $campo[6] ?></td>
+            <td scope="col"><?= $campo[5] ?></td>
             <td scope="col"><?= $campo[1] ?></td>
             <td scope="col"><?= $campo[2] ?></td>
+            <td scope="col"><?= $campo[3] ?></td>
+            <td scope="col"><?= $campo[4] ?></td>
+            <td scope="col"><?= $campo[7] ?></td>
         </tr>
   </tbody>
 </table>

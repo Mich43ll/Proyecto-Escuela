@@ -49,7 +49,7 @@
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Clases</a>
           <ul class="dropdown-menu dropdown-menu-dark">
           <li>
-            <a class="dropdown-item" href="#">Lista de Clases</a>
+            <a class="dropdown-item" href="/escuela/view/Clase/show.php">Lista de Clases</a>
           </li>
             <li>
               <a class="dropdown-item" href="/escuela/view/clases/IngresarClase.php">Ingresar Clases</a>
