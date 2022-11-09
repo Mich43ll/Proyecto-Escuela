@@ -47,7 +47,7 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
     array_push($campos, "<h2 class='error'>* No puede dejar el campo primer parcial vacio</h2>");
   }
   elseif(!is_numeric($primero)){
-    array_push($campos, "<h2 class='error'>* solo se aceptan numeros en el campo Primer parcial</h2>");
+    array_push($campos, "<h2 class='error'>* solo se aceptan numeros en el campo primer parcial</h2>");
   }
   if($primero > 100){
     array_push($campos, "<h2 class='error'>* El alumno no puede tener mas de 100 puntos en el primer parcial</h2>");
@@ -56,29 +56,42 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
   if ($segundo == "") {
     array_push($campos, "<h2 class='error'>* No puede dejar el campo segundo parcial vacio</h2>");
   }
-  elseif(!is_numeric($primero)){
-    array_push($campos, "<h2 class='error'>* solo se aceptan numeros en el campo Segundo parcial</h2>");
 
-  if($primero > 100){
+  elseif(!is_numeric($segundo)){
+    array_push($campos, "<h2 class='error'>* solo se aceptan numeros en el campo segundo parcial</h2>");
+  }
+
+  if($segundo > 100){
     array_push($campos, "<h2 class='error'>* El alumno no puede tener mas de 100 puntos en el segundo parcial</h2>");
   }
   if ($tercero == "") {
     array_push($campos, "<h2 class='error'>* No puede dejar el campo tercer parcial vacio</h2>");
   }
-  elseif(!is_numeric($primero)){
+
+  elseif(!is_numeric($tercero)){
     array_push($campos, "<h2 class='error'>* solo se aceptan numeros en el campo tercer parcial</h2>");
+  }
     
-  if($primero > 100){
+  if($tercero > 100){
     array_push($campos, "<h2 class='error'>* El alumno no puede tener mas de 100 puntos en el tercer parcial</h2>");
   }
   if ($alumno == "") {
     array_push($campos, "<h2 class='error'>* No puede dejar el campo Id Alumno vacio</h2>");
   }
+  elseif(!is_numeric($alumno)){
+    array_push($campos, "<h2 class='error'>* solo se aceptan numeros en el campo Alumno</h2>");
+  }
   if ($clase == "") {
     array_push($campos, "<h2 class='error'>* No puede dejar el campo Id Clase vacio</h2>");
   }
+  elseif(!is_numeric($clase)){
+    array_push($campos, "<h2 class='error'>* solo se aceptan numeros en el campo de Clase</h2>");
+  }
   if ($empleado == "") {
     array_push($campos, "<h2 class='error'>* No puede dejar el campo Id Empleado vacio</h2>");
+  }
+  elseif(!is_numeric($empleado)){
+    array_push($campos, "<h2 class='error'>* solo se aceptan numeros en el campo de empleado</h2>");
   }
 
   if (count($campos) > 0) {
@@ -99,6 +112,7 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
       echo"<h2 class='correcto'>Datos ingresados correctamente</h2>";
     }
   }
+
   ?>
   <h1>Ingresar Notas del Alumno</h1>
   <div class="inset">
