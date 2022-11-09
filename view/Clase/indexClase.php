@@ -2,7 +2,7 @@
 require_once("C://xampp/htdocs/Escuela/view/head/head.php");
 require_once("C://xampp/htdocs/Escuela/controller/clasescontroller.php");
 $obj = new clasesController();
-$rows= $obj->indexClase();
+$rows= $obj->indiceprueba();
 
 
 

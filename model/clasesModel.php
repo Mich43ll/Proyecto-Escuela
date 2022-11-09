@@ -22,7 +22,7 @@ class clasesModel{
     
     }
 
-    public function visualizar($idClase){
+    public function Visualizar($idClase){
             $statement = $this->PDO->prepare("select * from escuela.clase where idClase= :idClase limit 1");
             $statement ->bindParam(":idClase", $idClase);
             return($statement->execute()) ? $statement->fetch():false;
@@ -35,7 +35,7 @@ class clasesModel{
 
     public function update($idClase, $NombreClase, $Estado, $idEmpleado){
             $statement = $this->PDO->prepare("update escuela.clase
-            set idClase=:idClase, NombreClase=:NombreClase, Estado=:Estado, idEmpleado=:idEmpleado "); 
+            set  NombreClase=:NombreClase, Estado=:Estado, idEmpleado=:idEmpleado where idClase=:idClase "); 
 
            
             $statement->bindParam( ":idClase",$idClase);
@@ -48,11 +48,8 @@ class clasesModel{
 
     //PRUEBA
     public function indiceprueba(){
-        $statement = $this->PDO->prepare("SELECT a.idClase, cn.NombreClase, cn.Estado, cn.idEmpleado,
-
-        FROM escuela.clase cn join escuela.clase a on cn.idClase = a.idClase
-        join escuela.clase c on c.idClase = cn.idClase
-        join escuela.empleados e on cn. = e.idEmpleado");
+        $statement = $this->PDO->prepare("SELECT c.idClase, c.NombreClase, c.Estado, e.NombreCompleto FROM escuela.clase c 
+        join escuela.empleados e on c.idEmpleado = e.idEmpleado;");
         return($statement->execute()) ? $statement -> fetchAll() : false;
 }
     //PRUEBA

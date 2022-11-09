@@ -16,12 +16,16 @@ class clasesController{
     }
 
 
-    public function visualizar($idClase){
-      return($this ->model->visualizar($idClase)!=false)? $this->model->visualizar($idClase): header("Location:indexClase.php");
+    public function Visualizar($idClase){
+      return($this ->model->Visualizar($idClase)!=false)? $this->model->Visualizar($idClase): header("Location:indexClase.php");
     }
 
     public function indexClase(){
       return($this->model->indexClase()) ? $this->model->indexClase() : false; 
+    }
+
+    public function indiceprueba(){
+      return($this->model->indiceprueba()) ? $this->model->indiceprueba() : false; 
     }
 
     public function update($idClase, $NombreClase, $Estado, $idEmpleado){

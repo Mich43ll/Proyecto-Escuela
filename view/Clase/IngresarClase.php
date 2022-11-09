@@ -66,15 +66,15 @@ if(isset($_POST['submit'])){
 
 
 
-  <button type="submit" name= "submit"class="btn btn-primary">Guardar</button>
-    <a class="btn btn-danger" href="indexClases.php">Cancelar</a>
+  <button type="submit" name= "submit" class="btn btn-primary">Guardar</button>
+    <a class="btn btn-danger" href="/escuela/view/Clase/indexClase.php">Cancelar</a>
  
  
   
   </div>
 
   <?php
-require_once("C://wamp64/www/Escuela/view/Clase/validaciones.php");
+require_once("C://xampp/htdocs/Escuela/view/Clase/validaciones.php");
 ?>
 
 </form>
