@@ -26,9 +26,9 @@ class alumnosModel{
     
     }
 
-    public function show($idAlumnos){
-        $statement = $this->PDO->prepare("SELECT * FROM alumnos where idAlumnos = :idAlumnos ");
-        $statement->bindParam(":idAlumnos", $idAlumnos);
+    public function show($idAlumno){
+        $statement = $this->PDO->prepare("SELECT * FROM alumnos where idAlumno = :idAlumno ");
+        $statement->bindParam(":idAlumno", $idAlumno);
         return ($statement->execute()) ? $statement->fetch(): false;
 
     }
@@ -36,20 +36,20 @@ class alumnosModel{
         $statement = $this->PDO->prepare("SELECT * FROM alumnos");
         return ($statement->execute()) ? $statement->fetchAll() : false;
     }
-    public function update($idAlumnos, $NombreCompleto, $Direccion, $Genero, $Edad, $Estado, $idGrado){
-        $statement = $this->PDO->prepare("UPDATE alumnos SET NombreCompleto = :NombreCompleto, Direccion = :Direccion, Genero = :Genero, Edad = :Edad, Estado = :Estado, idGrado = :idGrado WHERE idAlumnos = :idAlumnos ");
+    public function update($idAlumno, $NombreCompleto, $Direccion, $Genero, $Edad, $Estado, $idGrado){
+        $statement = $this->PDO->prepare("UPDATE alumnos SET NombreCompleto = :NombreCompleto, Direccion = :Direccion, Genero = :Genero, Edad = :Edad, Estado = :Estado, idGrado = :idGrado WHERE idAlumno = :idAlumno ");
         $statement->bindParam(":NombreCompleto",$NombreCompleto);
         $statement->bindParam(":Direccion",$Direccion);
         $statement->bindParam(":Genero",$Genero);
         $statement->bindParam(":Edad",$Edad);
         $statement->bindParam(":Estado",$Estado);
         $statement->bindParam(":idGrado",$idGrado);
-        $statement->bindParam(":idAlumnos",$idAlumnos);
-        return ($statement->execute()) ? $idAlumnos : false;
+        $statement->bindParam(":idAlumno",$idAlumno);
+        return ($statement->execute()) ? $idAlumno : false;
     }
-    public function delete($idAlumnos){
-        $statement = $this->PDO->prepare("DELETE FROM alumnos where idAlumnos = :idAlumnos ");
-        $statement->bindParam(":idAlumnos", $idAlumnos);
+    public function delete($idAlumno){
+        $statement = $this->PDO->prepare("DELETE FROM alumnos where idAlumno = :idAlumno ");
+        $statement->bindParam(":idAlumno", $idAlumno);
         return ($statement->execute()) ? true : false;
 
     }

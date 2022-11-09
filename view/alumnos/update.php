@@ -2,7 +2,7 @@
     require_once("C://xampp/htdocs/Escuela/controller/alumnosController.php");
     $obj = new alumnosController();
     $user = $obj->update(
-                        $_POST['idAlumnos'],
+                        $_POST['idAlumno'],
                         $_POST['NombreCompleto'],
                         $_POST['Direccion'],
                         $_POST['Genero'],

@@ -2,15 +2,15 @@
     require_once("C://xampp/htdocs/Escuela/view/head/head.php");
     require_once("C://xampp/htdocs/Escuela/controller/alumnosController.php");
     $obj = new alumnosController();
-    $user = $obj->show($_GET['idAlumnos']);
+    $user = $obj->show($_GET['idAlumno']);
 ?>
     <form action="update.php"  method ="POST" autocomplete="off">
         <h1>Modificando Registro de Alumno</h1>
         <div class="inset">
 
         <p>
-            <label for="text">idAlumnos</label>
-            <input type="text" name="idAlumnos" readonly  value="<?= $user[0]?>" >
+            <label for="text">idAlumno</label>
+            <input type="text" name="idAlumno" readonly  value="<?= $user[0]?>" >
         </p>
 
         <p>
@@ -46,7 +46,7 @@
 
         <div>
             <input type="submit" class="btn btn-success" value="Actualizar">
-            <a class="btn btn-danger" href="show.php?idAlumnos=<?= $user[0]?>">Cancelar</a>
+            <a class="btn btn-danger" href="show.php?idAlumno=<?= $user[0]?>">Cancelar</a>
         </div>
 
     </form>

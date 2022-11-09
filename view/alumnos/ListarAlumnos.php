@@ -27,7 +27,7 @@
                     <th><?= $row[5] ?></th>
                     <th><?= $row[6] ?></th>
                     <th>
-                        <a href="show.php?idAlumnos=<?= $row[0] ?>" class="btn btn-primary">Ver</a>
+                        <a href="show.php?idAlumno=<?= $row[0] ?>" class="btn btn-primary">Ver</a>
                     </th>
                 </tr>
             <?php endforeach; ?>

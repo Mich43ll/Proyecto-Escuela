@@ -23,12 +23,18 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
       $campos = array();
       if($nombre == ""){
         array_push($campos, "El campo NombreCompleto no puede estar vacío");
+      }elseif(strlen($nombre)>100 || strlen($nombre) <3){
+        array_push($campos, "El campo NombreCompleto debe tener entre 3 a 100 caracteres");
       }
       if($direccion == ""){
         array_push($campos, "El campo direccion no puede estar vacío");
+      }elseif(strlen($direccion)>200 || strlen($direccion) <5){
+        array_push($campos, "El campo direccion debe tener entre 5 a 200 caracteres");
       }
       if($genero == ""){
         array_push($campos, "El campo genero no puede estar vacío");
+      }elseif($genero !="Masculino" || $genero != "Femenino" ){
+        array_push($campos, "En el campo genero solo puede ir Masculino o Femenino");
       }
       if($edad == ""){
         array_push($campos, "El campo edad no puede estar vacío");
@@ -56,22 +62,7 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
           $idGrado= $_POST['idGrado'],);
       }
     }
-/*if(isset['submit']){
-  if(empty($nombre)){
-    header("Location:IngresarAlumno.php");
-  }
-  else{
-    $obj = new alumnosController();
-    $obj->guardar(
-    $nombre= $_POST['NombreCompleto'],
-    $direccion= $_POST['Direccion'],
-    $genero= $_POST['Genero'],
-    $edad= $_POST['Edad'],
-    $estado= $_POST['Estado'],
-    $idGrado= $_POST['idGrado'],);
-  }
-}
-*/
+
 ?>
   <h1>Ingresar Alumno</h1>
   <div class="inset">

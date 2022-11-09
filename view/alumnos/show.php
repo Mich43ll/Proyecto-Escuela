@@ -3,7 +3,7 @@ require_once("C://xampp/htdocs/Escuela/view/head/head.php");
 require_once("C://xampp/htdocs/Escuela/controller/alumnosController.php");
 
 $obj = new alumnosController();
-$data = $obj->show($_GET['idAlumnos']);
+$data = $obj->show($_GET['idAlumno']);
 ?>
 <h2 class="text-center">Lista de Alumnos</h2>
 <table class="table container-fluid">
@@ -30,7 +30,7 @@ $data = $obj->show($_GET['idAlumnos']);
 </table>
 <div class="pb-3">
   <a href="ListarAlumnos.php" class="btn btn-primary">Regresar</a>
-  <a href="edit.php?idAlumnos=<?= $data[0]?>" class="btn btn-success">Actualizar</a>
+  <a href="edit.php?idAlumno=<?= $data[0]?>" class="btn btn-success">Actualizar</a>
   <!-- Button trigger modal -->
 <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Eliminar</a>
 
@@ -48,7 +48,7 @@ $data = $obj->show($_GET['idAlumnos']);
           </div>
           <div class="modal-footer">
               <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
-              <a href="delete.php?idAlumnos=<?= $data[0]?>" class="btn btn-danger">Eliminar</a>
+              <a href="delete.php?idAlumno=<?= $data[0]?>" class="btn btn-danger">Eliminar</a>
               <!--<button type="button">Eliminar</button> -->
           </div>
       </div>
