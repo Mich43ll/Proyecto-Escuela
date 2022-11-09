@@ -58,7 +58,7 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
 
   <div class="acciones">
   <input type="submit" class="btn btn-success" value="Actualizar">
-  <a class="btn btn-danger" href="VerIdNotas.php?idNotas=<?$alumno[0]?>">Cancelar</a>
+  <a class="btn btn-danger" href="indexNota.php">Cancelar</a>
 </div>
 
  

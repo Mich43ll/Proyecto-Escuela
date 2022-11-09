@@ -27,7 +27,7 @@ $notas = $obj->visualizar($_GET['idNotas']);
         Una vez eliminado, no podra ser revertido nuevamente el registro.
       </div>
       <div class="modal-footer">
-      //aqui se pone la variable del objeto y con la posicion de la columna d ela base
+      
         <a href="delete.php?idNotas=<?=$notas[0] ?>" type="button" class="btn btn-danger">Eliminar</a>
         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
       </div>

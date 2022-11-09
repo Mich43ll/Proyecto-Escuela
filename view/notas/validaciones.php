@@ -39,6 +39,4 @@ if (isset($_POST['submit'])) {
             echo "<p class='error'>* Solo puede ingresar numeros en el Id de la clase</p>";
         }
     }
-}else{
-    
 }
