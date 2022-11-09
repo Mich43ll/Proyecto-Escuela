@@ -29,11 +29,29 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="/escuela/index.php">Inicio</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Historia</a>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Clases</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+          <li>
+            <a class="dropdown-item" href="/escuela/view/Clase/indexClase.php">Lista de Clases</a>
+          </li>
+            <li>
+              <a class="dropdown-item" href="/escuela/view/Clase/IngresarClase.php">Ingresar Clases</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sobre Nosotros</a>
+          </ul>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Empleados</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+          <li>
+            <a class="dropdown-item" href="/escuela/view/empleados/showEmpl.php">Lista de Empleados</a>
+          </li>
+            <li>
+              <a class="dropdown-item" href="/escuela/view/empleados/indexEmpl.php">Ingresar Empleados</a>
             </li>
 
             <li class="nav-item dropdown">
