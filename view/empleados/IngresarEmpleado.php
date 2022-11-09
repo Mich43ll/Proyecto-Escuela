@@ -1,7 +1,7 @@
 
 <?php
-require_once("C://xampp/htdocs/Escuela/view/head/head.php");
-require_once("C://xampp/htdocs/Escuela/controller/empleadoscontroller.php");
+require_once("C://wamp64/www/Escuela/view/head/head.php");
+require_once("C://wamp64/www/Escuela/controller/empleadoscontroller.php");
 ?>
 
 <link rel="stylesheet" href="./css/form.css">
@@ -98,6 +98,6 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
 
 <?php
 
-require_once("C://xampp/htdocs/Escuela/view/head/footer.php");
+require_once("C://wamp64/www/Escuela/view/head/footer.php");
 
 ?>

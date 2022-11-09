@@ -1,5 +1,5 @@
 <?php
-    require_once("C://xampp/htdocs/Escuela/controller/alumnosController.php");
+    require_once("C://wamp64/www/Escuela/controller/alumnosController.php");
     $obj = new alumnosController();
     $user = $obj->update(
                         $_POST['idAlumno'],

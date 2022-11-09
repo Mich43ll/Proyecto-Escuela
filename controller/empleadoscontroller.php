@@ -5,7 +5,7 @@ class empleadosController{
 
     public function __construct()
     {
-        require_once("C://xampp/htdocs/Escuela/model/empleadosModel.php");
+        require_once("C://wamp64/www/Escuela/model/empleadosModel.php");
         $this->model = new empleadosModel();
 
     }
