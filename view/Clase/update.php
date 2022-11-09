@@ -1,6 +1,6 @@
 <?php
 
-require_once("C://wamp64/www/Escuela/controller/clasescontroller.php");
+require_once("C://xampp/htdocs/Escuela/controller/clasescontroller.php");
 $obj = new clasesController();
 $obj->update(
     $_POST['idClase'],
