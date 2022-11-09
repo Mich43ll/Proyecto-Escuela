@@ -23,6 +23,9 @@ class matriculasController{
     public function delete($idMatricula){
         return ($this->model->delete($idMatricula)) ? header("Location:indexmatricula.php") : header("Location:verId.php?idMatricula=".$idMatricula) ;
       }
+    public function indiceprueba(){
+        return($this->model->indiceprueba()) ? $this->model->indiceprueba() : false; 
+      }
   
 
     

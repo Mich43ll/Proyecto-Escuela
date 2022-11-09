@@ -39,6 +39,11 @@ class matriculasModel{
     $statement->bindParam(":idMatricula",$idMatricula);
     return($statement->execute())? true : false;
         }
+    public function indiceprueba(){
+    $statement = $this->PDO->prepare("SELECT e.idMatricula, c.NombreCompleto, e.Jornada, e.idGrado FROM escuela.alumnos c
+     join escuela.matriculas e on c.idAlumno = e.IdAlumno;");
+        return($statement->execute()) ? $statement -> fetchAll() : false;
+    }
 
 
 
