@@ -7,6 +7,6 @@ $_POST['NombreCompleto'],
 $_POST['idCargo'],
 $_POST['Direccion'],
 $_POST['Telefono'],
-$_POST['Estado'],
-);
+$_POST['Estado']);
+
 ?>

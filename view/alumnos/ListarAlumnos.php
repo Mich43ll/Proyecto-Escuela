@@ -4,7 +4,6 @@
     $obj = new alumnosController();
     $rows = $obj->index();
 ?>
-
 <h2 class="text-center">Lista de Alumnos</h2>
 <table class="table">
     <thead>
@@ -27,11 +26,14 @@
                     <th><?= $row[4] ?></th>
                     <th><?= $row[5] ?></th>
                     <th><?= $row[6] ?></th>
+                    <th>
+                        <a href="show.php?idAlumno=<?= $row[0] ?>" class="btn btn-primary">Ver</a>
+                    </th>
                 </tr>
             <?php endforeach; ?>
         <?php else: ?>
             <tr>
-                <td colspan="7" class="text-center">No hay Registros</td>
+                <td colspan="8" class="text-center">No hay Registros</td>
             </tr>
         <?php endif; ?>
     </tbody>
