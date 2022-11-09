@@ -44,6 +44,17 @@ class matriculasModel{
      join escuela.matriculas e on c.idAlumno = e.IdAlumno;");
         return($statement->execute()) ? $statement -> fetchAll() : false;
     }
+    public function update($idMatricula, $IdAlumno,$Jornada,$idGrado){
+        $statement = $this->PDO->prepare("update escuela.matriculas
+        set IdAlumno=:IdAlumno, Jornada=:Jornada, idGrado=:idGrado where idMatricula=:idMatricula "); 
+
+       
+        $statement->bindParam( ":IdAlumno",$IdAlumno);
+        $statement->bindParam(":Jornada",$Jornada);
+        $statement->bindParam(":idGrado", $idGrado);
+        $statement->bindParam(":idMatricula", $idMatricula);
+        return($statement->execute()) ? $idMatricula: false;
+}
 
 
 

@@ -1,6 +1,6 @@
 <?php
 
-require_once("C://xampp/htdocs/Escuela/controller/clasescontroller.php");
+require_once("C://wamp64/www/Escuela/controller/matriculascontroller.php");
 $obj = new matriculasController();
 $alumno = $obj->visualizar($_GET['idMatricula']);
 
@@ -15,24 +15,32 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
   <h1>Modificar Matriculas</h1>
   <div class="inset">
 
+
   <p>
     <label for="text">ID</label>
-    <input type="text" readonly name="IdAlumno" value="<?=$alumno[0] ?>" >
+    <input type="text" readonly name="idMatricula" readonly value="<?=$alumno[0] ?>" >
+  </p>
+  <p>
+    <label for="text">ID ALUMNOS</label>
+    <input type="text" readonly name="IdAlumno" value="<?=$alumno[1] ?>" >
   </p>
 
   <p>
     <label for="text">JORNADA</label>
-    <input type="text" name="Jornada"  value="<?=$alumno[1] ?>"  >
+    <input type="text" name="Jornada"  value="<?=$alumno[2] ?>"  >
   </p>
 
   <p>
     <label for="text">ID GRADO</label>
-    <input type="text" name="idGrado"  value="<?=$alumno[2] ?>" >
+    <input type="text" name="idGrado"  value="<?=$alumno[3] ?>" >
   </p>
+
+
+  
 
   <div class="acciones">
   <input type="submit" class="btn btn-success" value="Actualizar">
-  <a class="btn btn-danger" href="VerIdNotas.php?idNotas=<?$alumno[0]?>">Cancelar</a>
+  <a class="btn btn-danger" href="indexmatricula.php?idNotas=<?$alumno[0]?>">Cancelar</a>
 </div>
 
  
@@ -61,6 +69,6 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
 
 <?php
 
-require_once("C://xampp/htdocs/Escuela/view/head/footer.php");
+require_once("C://wamp64/www/Escuela/view/head/footer.php");
 
 ?>

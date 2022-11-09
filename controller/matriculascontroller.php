@@ -11,8 +11,8 @@ class matriculasController{
         //return ($idMatricula!=false) ? header("Location:show.php? id=". $idMatricula)  :  header("Location:create.php");
     }
 
-    public function visualizar($idClase){
-        return($this ->model->visualizar($idClase)!=false)? $this->model->visualizar($idClase): header("Location:indexmatricula.php");
+    public function visualizar($idMatricula){
+        return($this ->model->visualizar($idMatricula)!=false)? $this->model->visualizar($idMatricula): header("Location:indexmatricula.php");
       
       }
       public function indexmatricula(){
@@ -25,6 +25,11 @@ class matriculasController{
       }
     public function indiceprueba(){
         return($this->model->indiceprueba()) ? $this->model->indiceprueba() : false; 
+      }
+
+      public function update($idMatricula, $IdAlumno, $Jornada, $idGrado){
+        return ($this->model->update($idMatricula, $IdAlumno, $Jornada, $idGrado) != false) 
+        ? header("Location:indexMatricula.php") : header("Location:verId.php?idMatricula=".$idMatricula) ;
       }
   
 
