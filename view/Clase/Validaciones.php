@@ -2,15 +2,11 @@
 if (isset($_POST['submit'])) {
     if (empty($NombreClase)) {
         echo "<p class='error'>* Agregue el Nombre de la Clase</p>";
-    } else {
-        if (!is_numeric($NombreClase)) {
-            echo "<p class='error'>* </p>";
-        }else {
-            if ($NombreClase= ""){
-                echo "<p class='error'>* Campo vacio</p>";
-            }
+
+
+}
         }
-    }
+    
     if (empty($Estado)) {
         echo "<p class='error'>* ingrese el estado</p>";
     } else {
@@ -26,4 +22,4 @@ if (isset($_POST['submit'])) {
         }
     }
     
-}
+
