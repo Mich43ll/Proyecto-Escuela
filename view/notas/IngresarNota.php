@@ -46,18 +46,28 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
   if ($primero == "") {
     array_push($campos, "<h2 class='error'>* No puede dejar el campo primer parcial vacio</h2>");
   }
+  elseif(!is_numeric($primero)){
+    array_push($campos, "<h2 class='error'>* solo se aceptan numeros en el campo Primer parcial</h2>");
+  }
   if($primero > 100){
     array_push($campos, "<h2 class='error'>* El alumno no puede tener mas de 100 puntos en el primer parcial</h2>");
   }
+  
   if ($segundo == "") {
     array_push($campos, "<h2 class='error'>* No puede dejar el campo segundo parcial vacio</h2>");
   }
+  elseif(!is_numeric($primero)){
+    array_push($campos, "<h2 class='error'>* solo se aceptan numeros en el campo Segundo parcial</h2>");
+
   if($primero > 100){
     array_push($campos, "<h2 class='error'>* El alumno no puede tener mas de 100 puntos en el segundo parcial</h2>");
   }
   if ($tercero == "") {
     array_push($campos, "<h2 class='error'>* No puede dejar el campo tercer parcial vacio</h2>");
   }
+  elseif(!is_numeric($primero)){
+    array_push($campos, "<h2 class='error'>* solo se aceptan numeros en el campo tercer parcial</h2>");
+    
   if($primero > 100){
     array_push($campos, "<h2 class='error'>* El alumno no puede tener mas de 100 puntos en el tercer parcial</h2>");
   }
