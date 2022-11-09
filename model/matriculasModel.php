@@ -28,17 +28,21 @@ class matriculasModel{
         $statement = $this->PDO->prepare("select * from escuela.matriculas where idMatricula= :idMatricula limit 1");
         $statement ->bindParam(":idMatricula", $idMatricula);
         return($statement->execute()) ? $statement->fetch():false;
-    }
+         }
     public function indexmatricula(){
         $statement = $this->PDO->prepare("select * from escuela.matriculas");
         return($statement->execute()) ? $statement -> fetchAll() : false;
+        }
+
+    public function delete($idMatricula){
+    $statement = $this ->PDO->prepare("DELETE FROM matriculas  WHERE idMatricula = :idMatricula ");
+    $statement->bindParam(":idMatricula",$idMatricula);
+    return($statement->execute())? true : false;
+        }
 
 
 
-    }
-    
 
-
-}
+  }
 
 ?>

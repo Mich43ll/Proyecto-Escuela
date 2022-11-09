@@ -31,10 +31,10 @@ $rows= $obj->indexmatricula();
    <!--ENCABEZADO DE LA TABLA--> 
         <thead >
             <tr  >
-            <th scope="col">Id</th>
-            <th scope="col">Nom</th>
-            <th scope="col" >Estado</th>
-            <th scope="col">Id Empleado</th>
+            <th scope="col">ID</th>
+            <th scope="col">ID ALUMNO</th>
+            <th scope="col">JORNADA</th>
+            <th scope="col">ID GRADO</th>
        
             <th scope="col" width="22%"  rowspan="4">ACCIONES</th>
      
@@ -59,7 +59,7 @@ $rows= $obj->indexmatricula();
                                 <!------ACCIONES A REALIZAR--------------->
                       
                                 <td style="text-align: center;" >
-                                    <a href="VerId_Clase.php?idClase=<?=$row[0]?>" class="btn btn-primary">Ver</a>
+                                    <a href="verId.php?idMatricula=<?=$row[0]?>" class="btn btn-primary">Ver</a>
 
                             
                                 <!------ACCIONES A REALIZAR--------------->

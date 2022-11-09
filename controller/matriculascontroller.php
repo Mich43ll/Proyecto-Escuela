@@ -12,15 +12,20 @@ class matriculasController{
     }
 
     public function visualizar($idClase){
-        return($this ->model->visualizar($idClase)!=false)? $this->model->visualizar($idClase): header("Location:indexClase.php");
+        return($this ->model->visualizar($idClase)!=false)? $this->model->visualizar($idClase): header("Location:indexmatricula.php");
       
       }
       public function indexmatricula(){
         return($this->model->indexmatricula()) ? $this->model->indexmatricula() : false; 
       
-
-
     }
+
+    public function delete($idMatricula){
+        return ($this->model->delete($idMatricula)) ? header("Location:indexmatricula.php") : header("Location:verId.php?idMatricula=".$idMatricula) ;
+      }
+  
+
+    
 
 
     
