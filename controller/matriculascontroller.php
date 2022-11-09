@@ -11,8 +11,9 @@ class matriculasController{
         //return ($idMatricula!=false) ? header("Location:show.php? id=". $idMatricula)  :  header("Location:create.php");
     }
 
-    public function show($idMatricula){
-        return($this ->model->show($idMatricula)!=false)? $this->model->show($idMatricula): header("Location:vizualizarmatricula.php");
+    public function Visualizar($idNotas){
+    return($this ->model->visualizar($idNotas)!=false)? $this->model->visualizar($idNotas): header("Location:show.php");
+      
       }
     public function indexotro(){
         return ($this->model->indexotro()) ? $this->indexotro(): false;

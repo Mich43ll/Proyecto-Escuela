@@ -15,7 +15,7 @@ class matriculasModel{
     }
 
     public function insertar($IdAlumno,$Jornada,$idGrado){
-       $statement = $this->PDO->prepare("INSERT INTO escuela.matriculas VALUES(null,:IdAlumno,:Jornada,:idGrado)");
+       $statement = $this->PDO->prepare("INSERT INTO matriculas VALUES(null,:IdAlumno,:Jornada,:idGrado)");
        $statement->bindParam(":IdAlumno",$IdAlumno);
        $statement->bindParam(":Jornada",$Jornada);
        $statement->bindParam(":idGrado",$idGrado);
@@ -24,8 +24,8 @@ class matriculasModel{
     
     }
 
-    public function show ($idMatricula){
-        $statement = $this->PDO->prepare("SELECT * from escuela.matriculas where idMatricula= :idMatricula limit 1");
+    public function Visualizar ($idMatricula){
+        $statement = $this->PDO->prepare("select * from escuela.matriculas where idMatricula= :idMatricula limit 1");
         $statement ->bindParam(":idMatricula", $idMatricula);
         return($statement->execute()) ? $statement->fetch():false;
     }

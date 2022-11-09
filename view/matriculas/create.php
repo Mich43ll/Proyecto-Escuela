@@ -12,6 +12,7 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
 <?php
 
 $obj = new matriculasController();
+if(isset($_POST['sumbit']))
 $obj->guardar( 
     $_POST['IdAlumno'],
     $_POST['Jornada'],

@@ -88,8 +88,7 @@
           <ul class="dropdown-menu dropdown-menu-dark">
           <li><a class="dropdown-item" href="/escuela/view/matriculas/show.php">Matricula del Alumno</a></li>
             <li><a class="dropdown-item" href="/escuela/view/matriculas/create.php">Ingresar Nueva Matricula</a></li>
-            <li><a class="dropdown-item" href="#">Modifcar Matricula</a></li>
-            <li><a class="dropdown-item" href="#">Eliminar Matricula</a></li>
+          
           </ul>
         </li>
 
