@@ -5,7 +5,7 @@ class clasesModel{
     private $PDO;
     public function __construct()
     {
-        require_once("C://xampp/htdocs/Escuela/config/db.php");
+        require_once("C://wamp64/www/Escuela/config/db.php");
         $con = new db();
         //ALMACENAR LA CONEXION LA QUE BUSCA EL METODO DE ESTO PARA RETORNAR LOS DATOS
         $this ->PDO= $con->conexion();

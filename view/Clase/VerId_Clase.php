@@ -1,6 +1,6 @@
 <?php
-require_once("C://xampp/htdocs/Escuela/view/head/head.php");
-require_once("C://xampp/htdocs/Escuela/controller/clasescontroller.php");
+require_once("C://wamp64/www/Escuela/view/head/head.php");
+require_once("C://wamp64/www/Escuela/controller/clasescontroller.php");
 
 $obj = new clasesController();
 $notas = $obj->Visualizar($_GET['idClase']);
@@ -71,6 +71,6 @@ $notas = $obj->Visualizar($_GET['idClase']);
 
 <?php
 
-require_once("C://xampp/htdocs/Escuela/view/head/footer.php");
+require_once("C://wamp64/www/Escuela/view/head/footer.php");
 
 ?>
