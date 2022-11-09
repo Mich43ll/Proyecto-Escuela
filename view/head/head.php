@@ -90,14 +90,28 @@
               </ul>
             </li>
 
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Matriculas
+          </a>
+          <!---Lista de Matriculas Menu--> 
+          <ul class="dropdown-menu dropdown-menu-dark">
+          <li><a class="dropdown-item" href="/escuela/view/matriculas/indexmatricula.php">Matricula del Alumno</a></li>
+            <li><a class="dropdown-item" href="/escuela/view/matriculas/create.php">Ingresar Nueva Matricula</a></li>
           
-
           </ul>
+        </li>
 
-        </div>
-      </div>
 
-    </nav>
+
+
+
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
 
   </div>
 

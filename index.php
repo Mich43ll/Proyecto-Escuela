@@ -10,6 +10,7 @@ if(isset($_SESSION["s1"])){
 }
 else
     header("Location: ../escuela/controller/usuarioController.php");
+
 require_once("C://wamp64/www/Escuela/view/head/head.php");
 // require_once("C://wamp64/www/Escuela/controller/notasController.php");
 //     $obj = new notasController();
