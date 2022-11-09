@@ -12,7 +12,7 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
 <?php
 
 $obj = new matriculasController();
-if(isset($_POST['sumbit']))
+if(isset($_POST['submit']))
 $obj->guardar( 
     $alumno=$_POST['IdAlumno'],
     $jornada=$_POST['Jornada'],
@@ -39,7 +39,7 @@ $obj->guardar(
     <input type="text" name="idGrado" >
   </p>
 
-  <button type="submit" class="btn btn-primary">Guardar</button>
+  <button type="submit" name="submit" class="btn btn-primary">Guardar</button>
     <a class="btn btn-danger" href="index.php">Cancelar</a>
  
  
