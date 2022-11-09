@@ -11,8 +11,9 @@ class alumnosController{
     }
 
     public function guardar($NombreCompleto, $Direccion, $Genero, $Edad, $Estado, $idGrado){
-     $idAlumnos =  $this->model->insertar($NombreCompleto, $Direccion, $Genero, $Edad, $Estado, $idGrado);
-     return ($idAlumnos!=false) ? header("Location:show.php?idAlumnos=".$idAlumnos)  :  header("Location:IngresarAlumno.php");
+        $idAlumnos =  $this->model->insertar($NombreCompleto, $Direccion, $Genero, $Edad, $Estado, $idGrado);
+        //return ($idAlumnos!=false) ? header("Location:show.php?idAlumnos=".$idAlumnos)  :  header("Location:IngresarAlumno.php");
+      
     }
     public function show($idAlumnos){
       return($this->model->show($idAlumnos) != false) ? $this->model->show($idAlumnos)  : header("Location:index.php");
