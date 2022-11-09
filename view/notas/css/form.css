@@ -150,3 +150,7 @@ label:hover ~ input[type=text],
 label:hover ~ input[type=password] {
  	background:#ffffff;
 }
+
+li{
+  text-decoration: none;
+}
