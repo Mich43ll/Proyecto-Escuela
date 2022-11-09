@@ -12,7 +12,7 @@ class empleadosController{
 
     public function guardar($NombreCompleto, $idCargo, $Direccion, $Telefono, $Estado){
      $idEmpleado =  $this->model->insertar($NombreCompleto, $idCargo, $Direccion, $Telefono, $Estado);
-     return ($idEmpleado!=false) ? header("Location:show.php?idEmpleado=".$idEmpleado)  :  header("Location:IngresarEmpleado.php");
+     //return ($idEmpleado!=false) ? header("Location:show.php?idEmpleado=".$idEmpleado)  :  header("Location:IngresarEmpleado.php");
     }
     public function show($idEmpleado){
       return($this->model->show($idEmpleado) != false) ? $this->model->show($idEmpleado)  : header("Location:index.php");
