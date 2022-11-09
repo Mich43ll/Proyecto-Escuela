@@ -33,8 +33,10 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
       }
       if($genero == ""){
         array_push($campos, "El campo genero no puede estar vacío");
-      }elseif($genero !="Masculino" || $genero != "Femenino" ){
-        array_push($campos, "En el campo genero solo puede ir Masculino o Femenino");
+      }elseif($genero !="Masculino"){
+        if($genero != "Femenino" ){
+          array_push($campos, "En el campo genero solo puede ir Masculino o Femenino");
+        }
       }
       if($edad == ""){
         array_push($campos, "El campo edad no puede estar vacío");
@@ -52,6 +54,7 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
             echo "<li>".$campos[$i]."</li>";
         }
       }else{
+          echo "Datos Ingresados Corectamente";
           $obj = new alumnosController();
           $obj->guardar(
           $nombre= $_POST['NombreCompleto'],
