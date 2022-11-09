@@ -4,6 +4,7 @@
     $obj = new alumnosController();
     $rows = $obj->index();
 ?>
+<link rel="stylesheet" href="./css/tablenota.css">
 <h2 class="text-center">Lista de Alumnos</h2>
 <table class="table">
     <thead>

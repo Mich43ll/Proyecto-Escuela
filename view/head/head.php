@@ -25,30 +25,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
           <ul class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="/escuela/index.php">Inicio</a>
+        </li>
+        
 
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/escuela/index.php">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Historia</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sobre Nosotros</a>
-            </li>
 
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Alumnos</a>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li>
-                  <a class="dropdown-item" href="#">Lista de Alumnos</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/escuela/view/alumnos/index.php">Ingresar Alumno</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Clases</a>
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Alumnos</a>
           <ul class="dropdown-menu dropdown-menu-dark">
           <li>
             <a class="dropdown-item" href="/escuela/view/alumnos/ListarAlumnos.php.">Lista de Alumnos</a>
@@ -58,30 +41,6 @@
             </li>
           </ul>
         </li>
-        
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Empleados</a>
-          <ul class="dropdown-menu dropdown-menu-dark">
-          <li>
-            <a class="dropdown-item" href="/escuela/view/empleados/ListarEmpleados.php">Lista de Empleados</a>
-          </li>
-            <li>
-              <a class="dropdown-item" href="/escuela/view/empleados/IngresarEmpleado.php">Ingresar Empleados</a>
-            </li>
-
-
-
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Control de Notas
-              </a>
-
-              <!---Lista de Notas Menu-->
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="/escuela/view/notas/indexNota.php">Notas del Alumno</a></li>
-                <li><a class="dropdown-item" href="/escuela/view/notas/IngresarNota.php">Ingresar Nueva Nota</a></li>
-              </ul>
-            </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -95,16 +54,53 @@
           </ul>
         </li>
 
+            
+
+            <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Empleados</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+          <li>
+            <a class="dropdown-item" href="/escuela/view/empleados/ListarEmpleados.php">Lista de Empleados</a>
+          </li>
+            <li>
+              <a class="dropdown-item" href="/escuela/view/empleados/IngresarEmpleado.php">Ingresar Empleados</a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Clases</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+          <li>
+            <a class="dropdown-item" href="/escuela/view/Clase/indexClase.php">Lista de Clases</a>
+          </li>
+            <li>
+              <a class="dropdown-item" href="/escuela/view/Clase/IngresarClase.php">Ingresar Clases</a>
+            </li>
+          </ul>
+        </li>
 
 
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Control de Notas
+              </a>
 
+              <!---Lista de Notas Menu-->
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="/escuela/view/notas/indexNota.php">Notas del Alumno</a></li>
+                <li><a class="dropdown-item" href="/escuela/view/notas/IngresarNota.php">Ingresar Nueva Nota</a></li>
+              </ul>
+            </li>
+          
+          
 
+          </ul>
 
+        </div>
+      </div>
 
-      </ul>
-    </div>
-  </div>
-</nav>
+    </nav>
 
   </div>
 
