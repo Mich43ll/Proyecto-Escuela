@@ -28,20 +28,40 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
 
 
 <form action="IngresarClase.php"  method ="POST" autocomplete="off">
+
+
 <?php
+  if (isset($_POST['submit'])){
+    $NombreClase = $_POST['NombreClase'];
+  $Estado = $_POST['Estado'];
+  $idEmpleado = $_POST['idEmpleado'];
 
+  $campos = array();
+  if ($NombreClase == "") {
+    array_push($campos, "<h2 class='error'>* No puede dejar el campo  vacio</h2>");
+  }
+  if ($Estado == "") {
+    array_push($campos, "<h2 class='error'>* No puede dejar el campo vacio</h2>");
+  }
+  if ($idEmpleado == "") {
+    array_push($campos, "<h2 class='error'>* No puede dejar el campo vacio</h2>");
+  }
+  if (count($campos) > 0) {
+    for ($i = 0; $i < count($campos); $i++) {
+      echo $campos[$i];
+    }
+  } else {
+    $obj = new clasesController();
+    $obj->guardar(
+      $NombreClase = $_POST['NombreClase'],
+      $Estado = $_POST['Estado'],
+      $idEmpleado = $_POST['idEmpleado'],
+    );
 
-$obj=new clasesController();
-if(isset($_POST['submit'])){
-  $obj-> guardar(
-  $NombreClase= $_POST['NombreClase'],
-  $Estado= $_POST['Estado'],
-  $idEmpleado= $_POST['idEmpleado'],
-  );
-}
-
-?>
-
+      echo"<h2 class='correcto'>Datos ingresados correctamente</h2>";
+    }
+  }
+  ?>
 
 
 <h1>Ingresar Clase</h1>
@@ -74,7 +94,7 @@ if(isset($_POST['submit'])){
   </div>
 
   <?php
-require_once("C://xampp/htdocs/Escuela/view/Clase/validaciones.php");
+require_once("C://xampp/htdocs/Escuela/view/Clase/IngresarClase.php");
 ?>
 
 </form>
