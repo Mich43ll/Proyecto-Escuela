@@ -4,7 +4,7 @@ require_once("C://xampp/htdocs/Escuela/view/head/head.php");
 require_once("C://xampp/htdocs/Escuela/controller/clasescontroller.php");
 $obj = new clasesController();
 $filas= $obj->indexClase();
-//$nota = $obj->visualizar($_GET['Id_Clase']);
+//$nota = $obj->visualizar($_GET['idClase']);
 
 ?>
 <link rel="stylesheet" href="./css/form.css">
@@ -66,7 +66,7 @@ $filas= $obj->indexClase();
 
                         <div class="mb-3">
                             <label for="text" class="form-label">ID</label>
-                            <input type="idAlumno" class="form-control" id="FK_IdEmpleado" aria-describedby="Empleado" value="<?=$fila[0]?>">
+                            <input type="idAlumno" class="form-control" id="idEmpleado" aria-describedby="Empleado" value="<?=$fila[0]?>">
                        
                         </div>
 
@@ -74,7 +74,7 @@ $filas= $obj->indexClase();
 
                         <div class="mb-3">
                             <label for="text" class="form-label">Nombre Clase</label>
-                            <input type="idAlumno" class="form-control" id="Id_Clase" aria-describedby="Clase" value="<?=$fila[6]?>">
+                            <input type="idAlumno" class="form-control" id="idClase" aria-describedby="Clase" value="<?=$fila[6]?>">
                        
                         </div>
 
@@ -86,7 +86,7 @@ $filas= $obj->indexClase();
 
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Id Empleado</label>
-                            <input type="email" class="form-control" id="FK_IdEmpleado" aria-describedby="Empleado" value="<?=$fila[5]?>">
+                            <input type="email" class="form-control" id="idEmpleado" aria-describedby="Empleado" value="<?=$fila[5]?>">
                        
                        
                 

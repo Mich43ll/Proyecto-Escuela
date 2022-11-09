@@ -5,7 +5,7 @@ require_once("C://xampp/htdocs/Escuela/controller/clasescontroller.php");
 $obj = new clasesController();
 
 
- $campo = $obj  ->showClase($_GET['Id_Clases']);
+ $campo = $obj  ->visualizar($_GET['idClase']);
 
 ?>
 <!--END HEADER-->

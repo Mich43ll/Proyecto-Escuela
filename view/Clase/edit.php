@@ -2,7 +2,7 @@
 
 require_once("C://xampp/htdocs/Escuela/controller/clasescontroller.php");
 $obj = new clasesController();
-$alumno = $obj->visualizar($_GET['Id_Clase']);
+$alumno = $obj->visualizar($_GET['idClase']);
 
 ?>
 
@@ -17,7 +17,7 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
 
   <p>
     <label for="text">ID</label>
-    <input type="text" readonly name="Id_Clase" value="<?=$alumno[0] ?>" >
+    <input type="text" readonly name="idClase" value="<?=$alumno[0] ?>" >
   </p>
 
   <p>
@@ -34,7 +34,7 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
 
   <p>
     <label for="text">Id Empleado</label>
-    <input type="text" name="FK_IdEmpleado"  value="<?=$alumno[3] ?>" >
+    <input type="text" name="idEmpleado"  value="<?=$alumno[3] ?>" >
   </p>
 
   

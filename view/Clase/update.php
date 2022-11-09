@@ -5,7 +5,7 @@ $obj = new clasesController();
 $obj->update(
 $_POST['NombreClase'],
 $_POST['Estado'],
-$_POST['FK_IdEmpleado'],
+$_POST['idEmpleado'],
 );
 
 ?>

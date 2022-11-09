@@ -2,6 +2,8 @@
 
 require_once("C://xampp/htdocs/Escuela/view/head/head.php");
 
+require_once("C://xampp/htdocs/Escuela/controller/clasescontroller.php");
+
 ?>
 
 <link rel="stylesheet" href="./css/form.css">
@@ -25,45 +27,18 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
 
 
 
-<form action="registrar.php"  method ="POST" autocomplete="off">
+<form action="IngresarClase.php"  method ="POST" autocomplete="off">
 <?php
 
-$NombreClase="";
-$Estado="";
-$FK_IdEmpleado="";
 
-if(isset($_POST['NombreClase'])){
-  $idClase= $_POST['NombreClase'];
-  $idAlumno= $_POST['Estado'];
-  $idEmpleado= $_POST['FK_IdEmpleado'];
-  
-  $campos = array();
-  
-  if($NombreClase==""){
-        array_push($campos, "El campo Nombre Clae no debe estar vacio");
-  }
-  if($Estado==""){
-    array_push($campos, "El campo Estado no debe estar vacio");
-  }
-
-  if($FK_IdEmpleado==""){
-    array_push($campos, "El campo FK_IdEmpleado no debe estar vacio");
-  }
-
-
-  if(count($campos)>0){
-    echo "<div class='error'>";
-    for($i = 0; $i <count($campos); $i++){
-      echo "<li>".$campos[$i]."</div>";
-    }
-  }
-  else{
-    echo "<div class= 'correcto'>">
-    "Datos correctos";
-  }
-  echo "</div>";
-
-  }
+$obj=new clasesController();
+if(isset($_POST['submit'])){
+  $obj-> guardar(
+  $NombreClase= $_POST['NombreClase'],
+  $Estado= $_POST['Estado'],
+  $idEmpleado= $_POST['idEmpleado'],
+  );
+}
 
 ?>
 
@@ -74,25 +49,25 @@ if(isset($_POST['NombreClase'])){
 
   <p>
     <label for="text">Nombre Clase</label>
-    <input type="text" name="primerParcial" >
+    <input type="text" name="NombreClase" >
   </p>
 
   <p>
     <label for="text">Estado</label>
-    <input type="text" name="segundoParcial">
+    <input type="text" name="Estado">
   </p>
 
 
 
   <p>
     <label for="text">Id Empleado</label>
-    <input type="text" name="tercerParcial" >
+    <input type="text" name="idEmpleado" >
   </p>
 
 
 
-  <button type="submit" class="btn btn-primary">Guardar</button>
-    <a class="btn btn-danger" href="index.php">Cancelar</a>
+  <button type="submit" name= "submit"class="btn btn-primary">Guardar</button>
+    <a class="btn btn-danger" href="indexClases.php">Cancelar</a>
  
  
   

@@ -4,13 +4,13 @@ require_once("C://xampp/htdocs/Escuela/view/head/head.php");
 require_once("C://xampp/htdocs/Escuela/controller/clasescontroller.php");
 $obj = new clasesController();
 $filas= $obj->indexClase();
-$nota = $obj  ->showClase($_GET['Id_Clase']);
+$nota = $obj  ->visualizar($_GET['idClase']);
 
 
 ?>
 
 
-<a  href="ModificarClase.php?Id_Clase=<?=$fila[0] ?>"  type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Modificar</a>
+<a  href="ModificarClase.php?idClase=<?=$fila[0] ?>"  type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Modificar</a>
 <div class="modal fade" id="exampleModal" tabindex="-5" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -26,7 +26,7 @@ $nota = $obj  ->showClase($_GET['Id_Clase']);
 
                         <div class="mb-3">
                             <label for="text" class="form-label">ID</label>
-                            <input type="idAlumno" class="form-control" id="Id_Clase" aria-describedby="Clase" value="<?=$nota[0]?>">
+                            <input type="idAlumno" class="form-control" id="idClase" aria-describedby="Clase" value="<?=$nota[0]?>">
                        
                         </div>
 
@@ -46,7 +46,7 @@ $nota = $obj  ->showClase($_GET['Id_Clase']);
 
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Id Empleado</label>
-                            <input type="email" class="form-control" id="FK_IdEmpleado" aria-describedby="Empleado">
+                            <input type="email" class="form-control" id="idEmpleado" aria-describedby="Empleado">
                        
                         </div>
 
