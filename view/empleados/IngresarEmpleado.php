@@ -33,6 +33,8 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
       }
       if($telefono == ""){
         array_push($campos, "El campo telefono no puede estar vacío");
+      }elseif(strlen($telefono) <8 ||strlen($telefono) >8){
+        array_push($campos, "El campo telefono debe tener 8 digitos");
       }
       if($estado == ""){
         array_push($campos, "El campo estado no puede estar vacío");
@@ -44,6 +46,7 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
             echo "<li>".$campos[$i]."</li>";
         }
       }else{
+          echo "Datos Ingresados Corectamente";
           $obj = new empleadosController();
           $obj->guardar(
           $nombre= $_POST['NombreCompleto'],

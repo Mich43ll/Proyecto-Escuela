@@ -1,5 +1,5 @@
 <?php
- include("validacionesEmpleados.php") ;
+
 require_once("C://xampp/htdocs/Escuela/controller/empleadosController.php");
 $obj = new empleadosController();
 $obj->guardar(
