@@ -14,9 +14,9 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
 $obj = new matriculasController();
 if(isset($_POST['sumbit']))
 $obj->guardar( 
-    $_POST['IdAlumno'],
-    $_POST['Jornada'],
-    $_POST['idGrado']
+    $alumno=$_POST['IdAlumno'],
+    $jornada=$_POST['Jornada'],
+    $grado=$_POST['idGrado']
 );
 ?>
   <h1>Ingresar Matricula</h1>
