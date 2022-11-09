@@ -73,6 +73,10 @@ if(isset($_POST['submit'])){
   
   </div>
 
+  <?php
+require_once("C://wamp64/www/Escuela/view/Clase/validaciones.php");
+?>
+
 </form>
 
 
