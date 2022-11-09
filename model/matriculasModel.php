@@ -24,14 +24,14 @@ class matriculasModel{
     
     }
 
-    public function Visualizar ($idMatricula){
+    public function visualizar($idMatricula){
         $statement = $this->PDO->prepare("select * from escuela.matriculas where idMatricula= :idMatricula limit 1");
         $statement ->bindParam(":idMatricula", $idMatricula);
         return($statement->execute()) ? $statement->fetch():false;
     }
-    public function indexotro(){
-        $statement = $this->PDO->prepare("SELECT * FROM matriculas ");
-        return($statement->execute()) ? $statement->fetchAll(): false; 
+    public function indexmatricula(){
+        $statement = $this->PDO->prepare("select * from escuela.matriculas");
+        return($statement->execute()) ? $statement -> fetchAll() : false;
 
 
 

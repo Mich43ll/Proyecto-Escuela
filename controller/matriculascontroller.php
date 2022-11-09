@@ -11,13 +11,13 @@ class matriculasController{
         //return ($idMatricula!=false) ? header("Location:show.php? id=". $idMatricula)  :  header("Location:create.php");
     }
 
-    public function Visualizar($idNotas){
-    return($this ->model->visualizar($idNotas)!=false)? $this->model->visualizar($idNotas): header("Location:show.php");
+    public function visualizar($idClase){
+        return($this ->model->visualizar($idClase)!=false)? $this->model->visualizar($idClase): header("Location:indexClase.php");
       
       }
-    public function indexotro(){
-        return ($this->model->indexotro()) ? $this->indexotro(): false;
-
+      public function indexmatricula(){
+        return($this->model->indexmatricula()) ? $this->model->indexmatricula() : false; 
+      
 
 
     }
