@@ -5,7 +5,7 @@ class clasesController{
 
     public function __construct()
     {
-        require_once("C://wamp64/www/Escuela/model/clasesModel.php");
+        require_once("C://xampp/htdocs/Escuela/model/clasesModel.php");
         $this->model = new clasesModel();
 
     }

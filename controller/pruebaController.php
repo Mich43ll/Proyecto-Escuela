@@ -5,7 +5,7 @@ class pruebaController{
 
     public function __construct()
     {
-        require_once("C://wamp64/www/Escuela/model/pruebaModel.php");
+        require_once("C://xampp/htdocs/Escuela/model/pruebaModel.php");
         $this->model = new pruebaModel();
 
     }

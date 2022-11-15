@@ -1,6 +1,6 @@
 <?php
 
-require_once("C://wamp64/www/Escuela/controller/notasController.php");
+require_once("C://xampp/htdocs/Escuela/controller/notasController.php");
 $obj = new notasController();
 $obj->update(
 $_POST['idNotas'], $_POST['primerParcial'], 

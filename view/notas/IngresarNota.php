@@ -1,8 +1,8 @@
 <?php
 
-require_once("C://wamp64/www/Escuela/view/head/head.php");
+require_once("C://xampp/htdocs/Escuela/view/head/head.php");
 
-require_once("C://wamp64/www/Escuela/controller/notasController.php");
+require_once("C://xampp/htdocs/Escuela/controller/notasController.php");
 
 
 ?>
@@ -167,6 +167,6 @@ EL REGISTRO EN ACTION="VISUALIZARNOTA.PHP"-->
 <script src="./js/ingresar.js"></script>
 <?php
 
-require_once("C://wamp64/www/Escuela/view/head/footer.php");
+require_once("C://xampp/htdocs/Escuela/view/head/footer.php");
 
 ?>

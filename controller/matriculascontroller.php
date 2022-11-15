@@ -3,7 +3,7 @@ class matriculasController{
     private $model;
     public function __construct()
     {
-    require_once("C://wamp64/www/Escuela/model/matriculasModel.php");
+    require_once("C://xampp/htdocs/Escuela/model/matriculasModel.php");
     $this->model = new matriculasModel();
     }
     public function guardar($idAlumno,$Jornada,$idGrado ){

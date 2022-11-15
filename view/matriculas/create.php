@@ -1,7 +1,7 @@
 <?php
 
-require_once("C://wamp64/www/Escuela/view/head/head.php");
-require_once("C://wamp64/www/Escuela/controller/matriculascontroller.php");
+require_once("C://xampp/htdocs/Escuela/view/head/head.php");
+require_once("C://xampp/htdocs/Escuela/controller/matriculascontroller.php");
 
 ?>
 
@@ -115,6 +115,6 @@ if(isset($_POST['IdAlumno'])){
 <script src="./js/ingresar.js"></script>
 <?php
 
-require_once("C://wamp64/www/Escuela/view/head/footer.php");
+require_once("C://xampp/htdocs/Escuela/view/head/footer.php");
 
 ?>
