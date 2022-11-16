@@ -34,7 +34,7 @@
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Alumnos</a>
           <ul class="dropdown-menu dropdown-menu-dark">
           <li>
-            <a class="dropdown-item" href="/escuela/view/alumnos/ListarAlumnos.php.">Lista de Alumnos</a>
+            <a class="dropdown-item" href="/escuela/view/alumnos/ListarAlumnos.php">Lista de Alumnos</a>
           </li>
             <li>
               <a class="dropdown-item" href="/escuela/view/alumnos/IngresarAlumno.php">Ingresar Alumno</a>
